@@ -1,0 +1,28 @@
+openapi: 3.0.3
+info:
+  title: OpenAPI schema for template terraform-huaweicloud-secgroup
+components:
+  schemas:
+    variables:
+      type: object
+      required:
+      - secgroup_name
+      properties:
+        secgroup_name:
+          title: Secgroup Name
+          type: string
+          description: The name of the Security Group
+          x-walrus-ui:
+            group: Basic
+            order: 1
+        allowed_ports:
+          title: Allowed Ports
+          type: string
+          description: 'Allowed TCP ports, the format is: 80,443,20-23'
+          default: 22,3389,80,443
+          x-walrus-ui:
+            group: Basic
+            order: 2
+      x-walrus-ui:
+        groupOrder:
+        - Basic
